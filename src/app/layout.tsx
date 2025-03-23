@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     description: "Software developer with experience at Gusto",
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/images/screenshot2.png",
         width: 1200,
         height: 630,
         alt: "Dean Wahle's portfolio website"
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Dean Wahle | Developer",
     description: "Software developer with experience at Gusto",
-    images: ["/images/og-image.jpg"],
+    images: ["/images/screenshot2.png"],
   }
 };
 

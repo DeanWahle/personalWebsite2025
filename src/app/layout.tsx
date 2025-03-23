@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Dean Wahle | Developer",
-    description: "Software developer with experience at Gusto, Replit, and Panasonic Avionics",
+    description: "Software developer with experience at Gusto",
     images: [
       {
         url: "/images/og-image.jpg",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Dean Wahle | Developer",
-    description: "Software developer with experience at Gusto, Replit, and Panasonic Avionics",
+    description: "Software developer with experience at Gusto",
     images: ["/images/og-image.jpg"],
   }
 };

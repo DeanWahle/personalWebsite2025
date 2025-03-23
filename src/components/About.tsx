@@ -17,13 +17,15 @@ export default function About() {
       { threshold: 0.1 }
     );
     
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const currentRef = sectionRef.current;
+    
+    if (currentRef) {
+      observer.observe(currentRef);
     }
     
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
@@ -60,7 +62,7 @@ export default function About() {
           <div className="lg:col-span-3">
             <div className="prose prose-lg dark:prose-invert max-w-none space-y-6">
               <p>
-                Hello! I'm <strong>Dean</strong>, a software engineer specializing in AI platform engineering at Gusto. I build AI systems that automate complex workflows and enhance user experiences.
+                Hello! I&apos;m <strong>Dean</strong>, a software engineer specializing in AI platform engineering at Gusto. I build AI systems that automate complex workflows and enhance user experiences.
               </p>
               
               <p>
@@ -68,7 +70,7 @@ export default function About() {
               </p>
               
               <p>
-                When I'm not coding, you can find me exploring new technologies and building tools that make development more efficient and enjoyable.
+                When I&apos;m not coding, you can find me exploring new technologies and building tools that make development more efficient and enjoyable.
               </p>
             </div>
           </div>

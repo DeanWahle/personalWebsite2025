@@ -38,7 +38,7 @@ export default function Contact() {
       
       // Check if any EmailJS config is missing
       if (!serviceId || !templateId || !publicKey) {
-        throw new Error('EmailJS configuration missing. Please check your .env.local file.');
+        throw new Error("EmailJS configuration missing. Please check your .env.local file.");
       }
       
       if (formRef.current) {
@@ -77,13 +77,15 @@ export default function Contact() {
       { threshold: 0.1 }
     );
     
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const currentRef = sectionRef.current;
+    
+    if (currentRef) {
+      observer.observe(currentRef);
     }
     
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
@@ -112,7 +114,7 @@ export default function Contact() {
               
               {isSubmitted ? (
                 <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-900/30 text-green-800 dark:text-green-300 rounded-md p-4 mb-6">
-                  <p>Thank you for your message! I'll get back to you as soon as possible.</p>
+                  <p>Thank you for your message! I&apos;ll get back to you as soon as possible.</p>
                 </div>
               ) : (
                 <form ref={formRef} onSubmit={handleSubmit}>

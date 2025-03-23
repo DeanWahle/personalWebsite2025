@@ -10,21 +10,24 @@ export default function Hero() {
   useEffect(() => {
     if (!containerRef.current || !textRef.current) return;
     
+    const currentContainerRef = containerRef.current;
+    const currentTextRef = textRef.current;
+    
     const handleMouseMove = (e: MouseEvent) => {
-      const { left, top, width, height } = containerRef.current!.getBoundingClientRect();
+      const { left, top, width, height } = currentContainerRef!.getBoundingClientRect();
       const x = (e.clientX - left) / width;
       const y = (e.clientY - top) / height;
       
       const moveX = x * 20 - 10; // -10 to 10px movement
       const moveY = y * 20 - 10; // -10 to 10px movement
       
-      textRef.current!.style.transform = `translate(${moveX}px, ${moveY}px)`;
+      currentTextRef!.style.transform = `translate(${moveX}px, ${moveY}px)`;
     };
     
-    containerRef.current.addEventListener('mousemove', handleMouseMove);
+    currentContainerRef.addEventListener('mousemove', handleMouseMove);
     
     return () => {
-      containerRef.current?.removeEventListener('mousemove', handleMouseMove);
+      currentContainerRef?.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
 
@@ -43,7 +46,7 @@ export default function Hero() {
           ref={textRef}
           className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-center text-gray-900 dark:text-white transition-transform duration-200 ease-out"
         >
-          <span className="block">Hi, I'm <span className="text-indigo-600 dark:text-indigo-400">Dean</span></span>
+          <span className="block">Hi, I&apos;m <span className="text-indigo-600 dark:text-indigo-400">Dean</span></span>
           <span className="block mt-2">Software Engineer</span>
         </h1>
         

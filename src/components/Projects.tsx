@@ -6,12 +6,12 @@ import Image from 'next/image';
 const projectsData = [
   {
     id: 1,
-    title: 'Paul Graham Essay Explorer',
-    description: 'A Next.js application using Retrieval Augmented Generation (RAG) to answer questions about Paul Graham\'s essays. Retrieves relevant content from a vector database and generates concise answers with GPT-4 Turbo, featuring source citations and a comprehensive evaluation framework.',
-    image: 'https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500&q=80',
-    tags: ['Next.js', 'React', 'TypeScript', 'Supabase', 'pgvector', 'OpenAI', 'RAG'],
-    link: 'https://github.com/DeanWahle/PaulGrahamEssayRAG',
-    demoLink: 'https://pg-essay-rag.vercel.app/',
+    title: 'Vibethumb',
+    description: 'An AI-powered thumbnail creation tool that helps content creators design eye-catching thumbnails. Generate professional-quality thumbnails with custom text, backgrounds, and AI-driven design suggestions to maximize click-through rates.',
+    image: '/images/vibethumb.jpg',
+    tags: ['AI', 'Next.js', 'React', 'TypeScript', 'Image Generation', 'SaaS'],
+    link: 'https://youtu.be/xZZ8-Q-Xu9k',
+    demoLink: 'https://vibethumb.com/',
   }
 ];
 
@@ -96,7 +96,7 @@ interface ProjectProps {
 function ProjectCard({ project }: { project: ProjectProps }) {
   return (
     <div className="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-      <div className="relative h-60">
+      <div className="relative h-100">
         <Image
           src={project.image}
           alt={project.title}
@@ -128,7 +128,7 @@ function ProjectCard({ project }: { project: ProjectProps }) {
             rel="noopener noreferrer"
             className="flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
           >
-            View Code
+            Watch Demo
           </a>
           <a
             href={project.demoLink}
@@ -136,7 +136,7 @@ function ProjectCard({ project }: { project: ProjectProps }) {
             rel="noopener noreferrer"
             className="flex items-center justify-center px-4 py-2 border border-gray-300 dark:border-gray-600 text-sm font-medium rounded-md text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
           >
-            Live Demo
+            Live Site
           </a>
         </div>
       </div>
